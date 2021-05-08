@@ -8,6 +8,7 @@ import java.io.IOException;
 
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -16,7 +17,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class Data_Driven {
 
 	public static void main(String[] args)  throws IOException{
-		/*File f = new File("C:\\Users\\721901\\eclipse-workspace\\Maven\\target\\Credentials.xlsx");
+		File f = new File("C:\\Users\\721901\\eclipse-workspace\\Maven\\target\\Credentials.xlsx");
 		FileInputStream fis = new FileInputStream(f);
 		XSSFWorkbook wb = new XSSFWorkbook(fis);
 		XSSFSheet sheet = wb.getSheetAt(0);
@@ -33,18 +34,18 @@ public class Data_Driven {
 				}
 			}
 				
-			}*/
+			}
 		
-		File f = new File("C:\\Users\\721901\\eclipse-workspace\\Maven\\target\\Credentials.xlsx");
-		FileInputStream fis = new FileInputStream(f);
-		XSSFWorkbook wb = new XSSFWorkbook(fis);
+		File file = new File("C:\\Users\\721901\\eclipse-workspace\\Maven\\target\\Credentials.xlsx");
+		FileInputStream fiss = new FileInputStream(file);
+		XSSFWorkbook wbb = new XSSFWorkbook(fis);
 		
-		Sheet sheet = (Sheet) wb.createSheet("Register");
+		Sheet sheet1 = (Sheet) wb.createSheet("Register");
 		Row createRow=((org.apache.poi.ss.usermodel.Sheet) sheet).createRow(0);
 		Cell createCell = createRow.createCell(0);
 		createCell.setCellValue("25656");
 		
-		FileOutputStream fos = new FileOutputStream(f);
+		FileOutputStream fos = new FileOutputStream(file);
 		wb.write(fos);
 		wb.close();
 		System.out.println("Completed");
