@@ -40,7 +40,7 @@ public class Data_Driven {
 		FileInputStream fiss = new FileInputStream(file);
 		XSSFWorkbook wbb = new XSSFWorkbook(fis);
 		
-		Sheet sheet1 = (Sheet) wb.createSheet("Register");
+		Sheet sheet12 = (Sheet) wb.createSheet("Register");
 		Row createRow=((org.apache.poi.ss.usermodel.Sheet) sheet).createRow(0);
 		Cell createCell = createRow.createCell(0);
 		createCell.setCellValue("25656");
